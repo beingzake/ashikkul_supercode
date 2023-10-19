@@ -1,0 +1,223 @@
+/* Custom Fonts */
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(../fonts/Poppins-Regular.woff2);
+}
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(../fonts/Poppins-Bold.woff2);
+}
+@font-face {
+    font-family: IBMPlexSans-Medium;
+    src: url(../fonts/IBMPlexSans-Medium.woff2);
+}
+@font-face {
+    font-family: IBMPlexSans-Bold;
+    src: url(../fonts/IBMPlexSans-Bold.woff2);
+}
+@font-face {
+    font-family: Inter-Regular;
+    src: url(../fonts/Inter-Regular.woff2);
+}
+
+/* Color Variables */
+:root{
+    --black: #000;
+    --white: #fff;
+    --yellow: #FFD700;
+    --blue: #040047;
+}
+
+/* Custom Bootstrap */
+body, h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
+a{
+    display: flex;
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container-fluid{
+    max-width: 100%;
+    padding: 0 15px;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-12{
+    width: 100%;
+}
+.col-6{
+    width: 50%;
+}
+.poppinsR{
+    font-family: Poppins-Regular;
+}
+.poppinsB{
+    font-family: Poppins-Bold;
+}
+.ibmpM{
+    font-family: IBMPlexSans-Medium;
+}
+.ibmpB{
+    font-family: IBMPlexSans-Bold;
+}
+.interR{
+    font-family: Inter-Regular;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.wrapReverse{
+    flex-wrap: wrap-reverse;
+}
+.displayFlex{
+    display: flex;
+}
+.justifyCenter{
+    justify-content: center;
+}
+.alignCenter{
+    align-items: center;
+}
+.directCol{
+    flex-direction: column;
+}
+.blackColor{
+    color: var(--black);
+}
+.blueColor{
+    color: var(--blue);
+}
+.textCenter{
+    text-align: center;
+}
+@keyframes zoomInOut {
+    0%{
+        width: 40px;
+    }50%{
+        width: 50px;
+    }100%{
+        width: 40px;
+    }
+}
+
+/* Loader */
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+.loader .logo{
+    animation: zoomInOut 1s infinite;
+}
+
+/* Header */
+header{
+    padding: 24px 0;
+}
+.logo{
+    max-width: 140px;
+}
+
+/* ********************** Home Page************************ */
+/* Main Section */
+.mainSec{
+    margin: 14px 0 140px;
+}
+.mainSec h1{
+    font-size: 48px;
+    line-height: 101%;
+    letter-spacing: -0.48px;
+    max-width: 663px;
+}
+.mainSec p{
+    font-size: 16px;
+    line-height: 146%;
+    margin: 15px 0;
+}
+.mainSec a{
+    font-size: 16px;
+    line-height: 118%;
+    padding: 14px 34px;
+    border-radius: 23.5px;
+}
+.mainSec .buttons{
+    column-gap: 11px;
+    row-gap: 20px;
+}
+.mainSec a:first-child{
+    background-color: var(--yellow);
+}
+.mainSec a:first-child:hover{
+    color: var(--white);
+    background-color: var(--blue);
+}
+.mainSec a:last-child{
+    border: 1px solid var(--blue);
+}
+.mainSec a:last-child:hover{
+    color: var(--white);
+    background-color: var(--blue);
+}
+.mainSec .features{
+    column-gap: 32px;
+    row-gap: 30px;
+    margin: 40px 0 0 ;
+}
+.mainSec .features p{
+    font-size: 11px !important;
+    line-height: 118%;
+    margin: 0 ;
+}
+.mainSec .features p:before{
+    content: url(../img/tick.svg);
+    margin-right: 11px;
+}
+
+/* About Section */
+.aboutSec{
+    margin-bottom: 60px;
+}
+.aboutSec .imgBox{
+    max-width: 521px;
+    margin-right: 30px;
+}
+.aboutSec h3{
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.2px;
+    background-color: var(--yellow);
+    padding: 0 15px 1px 15px;
+    border-radius: 13.5px;
+    width: fit-content;
+}
+.aboutSec h2{
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: -0.32px;
+    margin: 17px 0 10px;
+    max-width: 320px;
+}
+.aboutSec p{
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.2px;
+    max-width: 420px;
+}
