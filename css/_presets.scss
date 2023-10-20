@@ -1,0 +1,43 @@
+%wrap{
+    flex-wrap: wrap;
+}
+%wrapReverse{
+    flex-wrap: wrap-reverse;
+}
+%displayFlex{
+    display: flex;
+}
+%displayFlexJC{
+    display: flex;
+    justify-content: center;
+}
+%displayFlexAC{
+    display: flex;
+    align-items: center;
+}
+%displayFlexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%justifyCenter{
+    justify-content: center;
+}
+%alignCenter{
+    align-items: center;
+}
+%directCol{
+    flex-direction: column;
+}
+%textCenter{
+    text-align: center;
+}
+%wytHyt100{
+    width: 100%;
+    height: 100%
+}
+%positionFix{
+    position: fixed;
+    top: 0;
+    left: 0;
+}

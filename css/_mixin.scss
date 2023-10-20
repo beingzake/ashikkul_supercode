@@ -1,0 +1,31 @@
+// Mixins
+@mixin fontFamily($font){
+    font-family: $font;
+}
+@mixin pad($a, $b, $c, $d){
+    padding: $a $b $c $d;
+}
+@mixin mar($a, $b, $c, $d){
+    margin: $a $b $c $d;
+}
+@mixin wid($w){
+    width: $w;
+}
+@mixin maxWid($m){
+    max-width: $m;
+}
+@mixin fontLine($f, $l, $s){
+    font-size: $f;
+    line-height: $l;
+    letter-spacing: $s;
+}
+@mixin gap($c, $r){
+    column-gap: $c;
+    row-gap: $r;
+}
+@mixin curve($c){
+    border-radius: $c;
+}
+@mixin fontSize($f){
+    font-size: $f;
+}

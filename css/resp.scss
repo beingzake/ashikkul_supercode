@@ -1,0 +1,41 @@
+@use 'mixin';
+
+// Tablet Responsive
+@media screen and ( max-width: 991px ){
+    h1{
+        @include mixin.fontSize(35px !important);
+        @include mixin.maxWid(500px !important);
+    }
+    h2{
+        @include mixin.fontSize(25px !important);
+    }
+    p, a{
+        @include mixin.fontSize(15px !important);
+    }
+    .mainSec {
+        @include mixin.mar(40px, 0px, 80px, 0px);
+    }
+}
+
+// Mobile Responsive
+@media screen and ( max-width: 767px ){
+    .col-sm-12{
+        @include mixin.wid(100%);
+    }
+    .aboutSec h2,
+    .aboutSec p{
+        @include mixin.maxWid(100%);
+    }
+    .aboutSec .imgBox{
+        @include mixin.mar(40px, 0px, 40px, 0px);
+    }
+    h1{
+        @include mixin.fontSize(30px !important);
+    }
+    h2{
+        @include mixin.fontSize(20px !important);
+    }
+    p, a{
+        @include mixin.fontSize(14px !important);
+    }
+}

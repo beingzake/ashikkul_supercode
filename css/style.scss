@@ -1,0 +1,187 @@
+@use 'presets';
+@use 'mixin';
+@use 'color';
+
+// Custom Fonts
+@font-face {
+    font-family: poppinsR;
+    src: url(../fonts/Poppins-Regular.woff2);
+}
+@font-face {
+    font-family: poppinsB;
+    src: url(../fonts/Poppins-Bold.woff2);
+}
+@font-face {
+    font-family: ibmpM;
+    src: url(../fonts/IBMPlexSans-Medium.woff2);
+}
+@font-face {
+    font-family: ibmpB;
+    src: url(../fonts/IBMPlexSans-Bold.woff2);
+}
+@font-face {
+    font-family: interR;
+    src: url(../fonts/Inter-Regular.woff2);
+}
+
+// Custom Bootstrap
+body, h1, h2, h3, h4, h5, h6, p, a{
+    @include mixin.pad(0px, 0px, 0px, 0px);
+    @include mixin.mar(0px, 0px, 0px, 0px);
+    color: color.$black
+}
+h1, h2{
+    @include mixin.fontFamily(poppinsB);
+}
+h3{
+    @include mixin.fontFamily(ibmpB);
+}
+a{
+    @extend %displayFlex;
+    text-decoration: none;
+}
+img{
+    @extend %wytHyt100;
+    object-fit: cover;
+}
+.container-fluid{
+    @include mixin.maxWid(100%);
+    @include mixin.pad(0px, 15px, 0px, 15px);
+}
+.container{
+    @include mixin.maxWid(1200px);
+    @include mixin.mar(auto, auto, auto, auto);
+}
+.row{
+    @extend %displayFlex;
+    @extend %wrap;
+}
+.col-12{
+    @include mixin.wid(100%);
+}
+.col-6{
+    @include mixin.wid(50%);
+}
+@keyframes zoomInOut {
+    0%{
+        @include mixin.wid(40px);
+    }50%{
+        @include mixin.wid(50px);
+    }100%{
+        @include mixin.wid(40px);
+    }
+}
+
+// Loader
+.loader{
+    @extend %displayFlexCenter;
+    @extend %wytHyt100;
+    @extend %positionFix;
+    background-color: color.$white;
+}
+.loader .logo{
+    animation: zoomInOut 1s infinite;
+}
+
+// Header
+header{
+    @include mixin.pad(24px, 0px, 24px, 0px);
+}
+.logo{
+    @include mixin.maxWid(140px);
+}
+
+////////////////////// Home Page
+// Main Section
+.mainSec{
+    @include mixin.mar(14px, 0px, 140px, 0px);
+}
+.mainSec .col-12{
+    @extend %displayFlexCenter;
+    @extend %directCol;
+}
+.mainSec h1{
+    @include mixin.fontLine(48px, 101%, -0.48px);
+    @include mixin.mar(0px, 0px, 0px, 0px);
+    @include mixin.maxWid(663px);
+    @extend %textCenter;
+}
+.mainSec p{
+    @include mixin.fontLine(16px, 146%, auto);
+    @include mixin.mar(15px, 0px, 15px, 0px);
+    @include mixin.fontFamily(poppinsR);
+    @extend %textCenter;
+}
+.mainSec a{
+    @include mixin.fontLine(16px, 118%, auto);
+    @include mixin.pad(14px, 34px, 14px, 34px);
+    @include mixin.curve(23.5px);
+    @include mixin.fontFamily(ibmpM);
+}
+.mainSec .buttons{
+    @include mixin.gap(11px, 20px);
+    @extend %displayFlexJC;
+    @extend %wrap;
+}
+.mainSec a:first-child{
+    background-color: color.$yellow;
+}
+.mainSec a:first-child:hover{
+    color: color.$white;
+    background-color: color.$blue;
+}
+.mainSec a:last-child{
+    border: 1px solid color.$blue;
+}
+.mainSec a:last-child:hover{
+    color: color.$white;
+    background-color: color.$blue;
+}
+.mainSec .features{
+    @include mixin.gap(32px, 30px);
+    @include mixin.mar(40px, 0px, 0px, 0px);
+    @extend %displayFlexJC;
+    @extend %wrap;
+}
+.mainSec .features p{
+    @include mixin.fontLine(11px !important, 118%, auto);
+    @include mixin.mar(0px, 0px, 0px, 0px);
+    @include mixin.fontFamily(ibmpM);
+    color: color.$blue;
+    @extend %displayFlexAC;
+}
+.mainSec .features p:before{
+    content: url(../img/tick.svg);
+    @include mixin.mar(0px, 11px, 0px, 0px);
+}
+
+// About Section
+.aboutSec{
+    @include mixin.mar(60px, 0px, 0px, 0px);
+}
+.aboutSec .row{
+    @extend %wrapReverse;
+}
+.aboutSec p{
+    @include mixin.fontFamily(interR);
+}
+.aboutSec .imgBox{
+    @include mixin.maxWid(521px);
+    @include mixin.mar(0px, 30px, 0px, 0px);
+}
+.aboutSec h3{
+    @include mixin.fontLine(13px, 26px, 0.2px);
+    background-color: color.$yellow;
+    @include mixin.pad(0px, 15px, 1px, 15px);
+    @include mixin.curve(13.5px);
+    @include mixin.wid(fit-content);
+}
+.aboutSec h2{
+    @include mixin.fontLine(32px, 110%, -0.32px);
+    @include mixin.mar(17px, 0px, 10px, 0px);
+    @include mixin.maxWid(320px);
+}
+.aboutSec p{
+    @include mixin.fontLine(14px, 21px, 0.2px);
+    @include mixin.maxWid(420px);
+}
